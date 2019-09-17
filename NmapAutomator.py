@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+
+__author__ = 'Dipmalya Pyne'
+__date__ = '201911709'
+__version__ = '0.01'
+__description__ = 'This tool aims at automating Nmap for active IP scanning to the maximum possible limit!'
+
 import nmap
 import socket
 import sys
@@ -193,36 +200,40 @@ def scan(ip_addr, continueflag):
             continueflag = 1
 
 
-ip_addr = ''
 yes_read_file = input("Do you want to read from a file? Press y to read from a file!!")
 if yes_read_file == 'y' or yes_read_file == 'Y':
-    try:
-        file_path = input("Please specify the full path of the file that needs to be read!!")
-        regex = '''^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
-                    25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
-                    25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
-                    25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)'''
-        with open(file_path, 'r') as o:
-            for line in o:
-                if re.search(regex, line):
-                    ip_addr = ip_addr + ' ' + line
-                    continue
+    ip_final = ''
+    ip_addr = ''
+    file_path = input("Please specify the full path of the file that needs to be read!!")
+    regex = '''^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
+                25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
+                25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
+                25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)'''
+    if os.path.exists(file_path):
+        ip_address = open(file_path, 'r').read().split('\n')
+        for ip_add in ip_address:
+            if not ip_add == '0.0.0.0':
+                if re.search(regex, ip_add):
+                    ip_final = ip_final + ' ' + ip_add
                 else:
                     try:
-                        ip_host = socket.gethostbyname(line)
-                    except socket.gaierror:
-                        continue
-                    if re.search(regex, ip_host):
-                        ip_addr = ip_addr + ' ' + ip_host
-                    else:
-                        continue
+                        ip_soc = socket.gethostbyname(ip_add)
+                        ip_final = ip_final + ' ' + ip_soc
+                    except:
+                        print(ip_add + " is not correctly formatted!!")
+
+    ip_addr = ip_final.replace('0.0.0.0','').replace('1.0.0.1','')
+    if not ip_addr == '':
+        print(ip_addr)
         scan(ip_addr, 0)
-    except FileNotFoundError:
-        print("No such file exists!!")
+    else:
+        print("Nothing to Scan!!")
+
 
 else:
     ip_addr = '0.0.0.0'
     ip_final = ''
+    ip_finally = ''
     while ip_addr == '0.0.0.0':
         ip_addr = input("Please enter the IP address or hostname you want to scan: ")
         regex = '''^(25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)\.( 
@@ -231,13 +242,17 @@ else:
                             25[0-5]|2[0-4][0-9]|[0-1]?[0-9][0-9]?)'''
         ip_address = ip_addr.split(' ')
         for ip_add in ip_address:
-            try:
-                ip_host = socket.gethostbyname(ip_add)
-                if re.search(regex, ip_host):
-                    ip_final = ip_final + ' ' + ip_add
-            except socket.gaierror:
-                print(ip_add + " is not correctly formatted!!")
-    if not ip_final == '':
-        scan(ip_final, 0)
+            if re.search(regex, ip_add):
+                ip_final = ip_final + ' ' + ip_add
+            else:
+                try:
+                    ip_soc = socket.gethostbyname(ip_add)
+                    ip_final = ip_final + ' ' + ip_soc
+                except:
+                    print(ip_add + " is not correctly formatted!!")
+
+    ip_finally = ip_final.replace('0.0.0.0','').replace('1.0.0.1','')
+    if not ip_finally == '':
+        scan(ip_finally, 0)
     else:
         print("Nothing to Scan!!")
