@@ -3,4 +3,4 @@ A simple python tool to automate nmap scans to read from a file or IPs to scan. 
 
 #Requirements
 Python 3 - Installation Guide https://www.python.org/downloads/
-Installaing module python-nmap - Run the command "pip install python-nmap"
+Installing module python-nmap - Run the command "pip install python-nmap"
