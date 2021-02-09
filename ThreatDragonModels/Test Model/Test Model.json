@@ -1,0 +1,22 @@
+{
+  "summary": {
+    "title": "Test Model",
+    "owner": "Testing OWASP Threat Dragon",
+    "description": "Demo Lab"
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Ranganath, Gangalvoi"
+      }
+    ],
+    "diagrams": [
+      {
+        "title": "Test Diagram",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "Dipmalya Pyne"
+  }
+}
