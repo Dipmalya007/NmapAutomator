@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "title": "TenXR - Application Threat Model",
+    "owner": "Dipmalya Pyne",
+    "description": "This is a threat model of the application https://ten-xr-mvp-qa.azureedge.net/. This application is under development and is being developed. It is going to be a defense application."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "reviewer": "Ranganath Gangalvoi"
+  }
+}
