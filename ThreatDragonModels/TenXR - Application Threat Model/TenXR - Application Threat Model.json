@@ -6,13 +6,7 @@
   },
   "detail": {
     "contributors": [],
-    "diagrams": [
-      {
-        "title": "TenXR - Application Threat Model",
-        "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
-      }
-    ],
+    "diagrams": [],
     "reviewer": "Ranganath Gangalvoi"
   }
 }
