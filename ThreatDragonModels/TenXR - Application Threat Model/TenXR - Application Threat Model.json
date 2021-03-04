@@ -58,10 +58,10 @@
                 {
                   "status": "Open",
                   "severity": "High",
-                  "type": "Information disclosure",
                   "title": "Credentials Exposure",
-                  "description": "The database would contain sensitive information (usernames, passwords, hashes etc.) which if exposed would cripple the authentication requirement of the application.",
-                  "mitigation": "The database should be encrypted."
+                  "type": "Information disclosure",
+                  "mitigation": "The database should be encrypted.",
+                  "description": "This database would contain critical information about credentials (usernames, passwords, hashes etc.) which if not protected against attackers, would lead to exposure of sensitive information."
                 }
               ],
               "outOfScope": false,
@@ -76,11 +76,37 @@
                   "class": "element-text hasOpenThreats isInScope"
                 }
               }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 260,
+                "y": 190
+              },
+              "angle": 0,
+              "id": "9cafece0-d6de-40f8-8fb6-1a07707fca12",
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Authentication"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
         "size": {
-          "height": 590,
+          "height": 1820,
           "width": 790
         }
       }
