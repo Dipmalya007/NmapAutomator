@@ -32,10 +32,47 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "actor 0"
+                  "text": "Command Center /\nBrowser"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 50,
+                "y": 370
+              },
+              "angle": 0,
+              "id": "d1f54975-1351-4210-9f89-6bf8e31ef797",
+              "z": 2,
+              "hasOpenThreats": true,
+              "storesCredentials": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "title": "Credentials Exposure",
+                  "description": "The database would contain sensitive information (usernames, passwords, hashes etc.) which if exposed would cripple the authentication requirement of the application.",
+                  "mitigation": "The database should be encrypted."
+                }
+              ],
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Credentials database"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             }
