@@ -64,6 +64,7 @@
                   "mitigation": "The database should be encrypted."
                 }
               ],
+              "outOfScope": false,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasOpenThreats isInScope"
