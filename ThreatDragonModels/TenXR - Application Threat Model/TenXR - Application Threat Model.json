@@ -76,32 +76,6 @@
                   "class": "element-text hasOpenThreats isInScope"
                 }
               }
-            },
-            {
-              "type": "tm.Actor",
-              "size": {
-                "width": 160,
-                "height": 80
-              },
-              "position": {
-                "x": 260,
-                "y": 190
-              },
-              "angle": 0,
-              "id": "9cafece0-d6de-40f8-8fb6-1a07707fca12",
-              "z": 3,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
-                },
-                "text": {
-                  "text": "Authentication"
-                },
-                ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
-                }
-              }
             }
           ]
         },
