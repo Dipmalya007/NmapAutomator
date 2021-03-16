@@ -72,7 +72,7 @@
                 "height": 80
               },
               "position": {
-                "x": 33,
+                "x": 36,
                 "y": 526
               },
               "angle": 0,
@@ -385,8 +385,8 @@
                 "height": 80
               },
               "position": {
-                "x": 15,
-                "y": 351
+                "x": 19,
+                "y": 343
               },
               "angle": 0,
               "id": "f43ad40b-f0fd-4678-9cf4-640b766b8775",
@@ -453,6 +453,93 @@
                   "type": "Spoofing",
                   "description": "MiTM",
                   "mitigation": "Encrypt channel"
+                }
+              ],
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 37,
+                "y": 658
+              },
+              "angle": 0,
+              "id": "bf8335e7-762e-4d5f-b413-c1762934d0ef",
+              "z": 15,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Role Abuse",
+                  "type": "Elevation of privilege",
+                  "description": "Bypass RBAC",
+                  "mitigation": "Implement strong role based access control"
+                }
+              ],
+              "outOfScope": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "Stealing access tokens\nRole Abuse"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "bf8335e7-762e-4d5f-b413-c1762934d0ef"
+              },
+              "target": {
+                "id": "281894e0-5dd2-43e6-9709-154a486f83ec"
+              },
+              "vertices": [
+                {
+                  "x": 115,
+                  "y": 641
+                }
+              ],
+              "id": "7991e98f-2e6e-44da-864b-f88d7e390b49",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 16,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man-in-the-middle attack",
+                  "type": "Tampering",
+                  "description": "MiTM",
+                  "mitigation": "Encryption"
                 }
               ],
               "outOfScope": true,
