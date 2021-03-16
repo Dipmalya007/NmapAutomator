@@ -20,8 +20,8 @@
                 "height": 80
               },
               "position": {
-                "x": 50,
-                "y": 50
+                "x": 43,
+                "y": 143
               },
               "angle": 0,
               "id": "0e2de5ba-ad75-4fd9-9848-3b5df6f21d6b",
@@ -40,40 +40,213 @@
               }
             },
             {
-              "type": "tm.Store",
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 434,
+                "y": 337
+              },
+              "angle": 0,
+              "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1",
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Ten-XR Web\nApplication\nLanding Page"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
               "size": {
                 "width": 160,
                 "height": 80
               },
               "position": {
-                "x": 50,
-                "y": 370
+                "x": 60,
+                "y": 480
               },
               "angle": 0,
-              "id": "d1f54975-1351-4210-9f89-6bf8e31ef797",
-              "z": 2,
-              "hasOpenThreats": true,
-              "storesCredentials": true,
-              "threats": [
-                {
-                  "status": "Open",
-                  "severity": "High",
-                  "title": "Credentials Exposure",
-                  "type": "Information disclosure",
-                  "mitigation": "The database should be encrypted.",
-                  "description": "This database would contain critical information about credentials (usernames, passwords, hashes etc.) which if not protected against attackers, would lead to exposure of sensitive information."
-                }
-              ],
-              "outOfScope": false,
+              "id": "281894e0-5dd2-43e6-9709-154a486f83ec",
+              "z": 4,
+              "hasOpenThreats": false,
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasOpenThreats isInScope"
+                  "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "Credentials database"
+                  "text": "Azure Active Directory"
                 },
                 ".element-text": {
-                  "class": "element-text hasOpenThreats isInScope"
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "0e2de5ba-ad75-4fd9-9848-3b5df6f21d6b"
+              },
+              "target": {
+                "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1"
+              },
+              "vertices": [
+                {
+                  "x": 328,
+                  "y": 271
+                }
+              ],
+              "id": "1e3ed2d1-3440-49f9-89f5-078b3860dbe4",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Login Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 5,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1"
+              },
+              "target": {
+                "id": "0e2de5ba-ad75-4fd9-9848-3b5df6f21d6b"
+              },
+              "vertices": [
+                {
+                  "x": 28,
+                  "y": 315
+                }
+              ],
+              "id": "9cc51b01-7327-4d7b-b856-da6bac852ba5",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Authentication\nSuccessful",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 6,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Boundary",
+              "smooth": true,
+              "source": {
+                "x": 335,
+                "y": 153
+              },
+              "target": {
+                "x": 235,
+                "y": 344
+              },
+              "vertices": [
+                {
+                  "x": 241,
+                  "y": 235
+                }
+              ],
+              "id": "fc82f13e-2114-4bd5-be38-a317052b371b",
+              "z": 7,
+              "attrs": {}
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 41,
+                "y": 9
+              },
+              "angle": 0,
+              "id": "7bed8c18-e99f-4067-bbc6-249310883e50",
+              "z": 8,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Impersonating User\nSpoofing\nPhysical-Security\nViolation"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "7bed8c18-e99f-4067-bbc6-249310883e50"
+              },
+              "target": {
+                "id": "0e2de5ba-ad75-4fd9-9848-3b5df6f21d6b"
+              },
+              "vertices": [],
+              "id": "c27125d1-acd0-4f72-ba90-92d9703ae9d7",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 9,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
