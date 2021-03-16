@@ -359,8 +359,8 @@
                 "height": 100
               },
               "position": {
-                "x": 327,
-                "y": 412
+                "x": 323,
+                "y": 413
               },
               "angle": 0,
               "id": "3cef2ee2-22b9-472c-bf16-6107ff65e54c",
@@ -385,8 +385,8 @@
                 "height": 80
               },
               "position": {
-                "x": 7,
-                "y": 352
+                "x": 15,
+                "y": 351
               },
               "angle": 0,
               "id": "f43ad40b-f0fd-4678-9cf4-640b766b8775",
@@ -397,10 +397,49 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "actor 11"
+                  "text": "Weak Authentication\nBypass MFA\nSession-Misconfiguration"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "f43ad40b-f0fd-4678-9cf4-640b766b8775"
+              },
+              "target": {
+                "id": "3cef2ee2-22b9-472c-bf16-6107ff65e54c"
+              },
+              "vertices": [
+                {
+                  "x": 245,
+                  "y": 468
+                }
+              ],
+              "id": "5af44b9a-d44c-4204-bcb3-1f42460c3fac",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
                 }
               }
             }
