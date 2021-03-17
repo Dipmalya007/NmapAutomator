@@ -46,8 +46,8 @@
                 "height": 100
               },
               "position": {
-                "x": 525,
-                "y": 310
+                "x": 518,
+                "y": 305
               },
               "angle": 0,
               "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1",
@@ -531,6 +531,158 @@
                 }
               ],
               "z": 16,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man-in-the-middle attack",
+                  "type": "Tampering",
+                  "description": "MiTM",
+                  "mitigation": "Encryption"
+                }
+              ],
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 540,
+                "y": 14
+              },
+              "angle": 0,
+              "id": "1d471095-7da3-4307-a473-2b8392209e48",
+              "z": 17,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "News DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "1d471095-7da3-4307-a473-2b8392209e48"
+              },
+              "target": {
+                "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1"
+              },
+              "vertices": [
+                {
+                  "x": 659,
+                  "y": 193
+                }
+              ],
+              "id": "afb48019-41aa-4e77-9d16-aeb6131cff60",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "News Bulletins",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 18,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 392,
+                "y": 154
+              },
+              "angle": 0,
+              "id": "10f66723-29da-49ac-825a-c439d5249cc7",
+              "z": 19,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "XSS",
+                  "type": "Information disclosure",
+                  "description": "XSS",
+                  "mitigation": "Output Encoding, Input Validation"
+                }
+              ],
+              "outOfScope": true,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasOpenThreats isOutOfScope"
+                },
+                "text": {
+                  "text": "OWASP Top 10 Threats\n(XSS, Injection attacks,\nImproper Input\nValidation, Malware)"
+                },
+                ".element-text": {
+                  "class": "element-text hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "10f66723-29da-49ac-825a-c439d5249cc7"
+              },
+              "target": {
+                "id": "1358463d-4d2f-42e4-a3e1-d0c8174f98e1"
+              },
+              "vertices": [
+                {
+                  "x": 528,
+                  "y": 279
+                }
+              ],
+              "id": "e67a9236-6855-4f69-ab92-82b779a6c597",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "flow 18",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 20,
               "hasOpenThreats": true,
               "threats": [
                 {
