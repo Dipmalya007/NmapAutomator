@@ -851,8 +851,8 @@
                 "height": 100
               },
               "position": {
-                "x": 616,
-                "y": 477
+                "x": 652,
+                "y": 475
               },
               "angle": 0,
               "id": "6d8c725b-caea-4089-96d0-b20787382f62",
@@ -877,8 +877,8 @@
                 "height": 100
               },
               "position": {
-                "x": 725,
-                "y": 401
+                "x": 744,
+                "y": 392
               },
               "angle": 0,
               "id": "ba8dce10-d823-4217-a801-4aab1ff8a648",
@@ -903,8 +903,8 @@
                 "height": 100
               },
               "position": {
-                "x": 802,
-                "y": 306
+                "x": 824,
+                "y": 303
               },
               "angle": 0,
               "id": "5c284010-9e7d-432e-ac87-5ce80d85c787",
@@ -955,8 +955,8 @@
                 "height": 80
               },
               "position": {
-                "x": 861,
-                "y": 208
+                "x": 809,
+                "y": 209
               },
               "angle": 0,
               "id": "d06d46c7-a11c-47fe-9ce7-d1fa21565c21",
@@ -1522,6 +1522,121 @@
                 }
               ],
               "z": 42,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "Man-in-the-middle attack",
+                  "type": "Spoofing",
+                  "description": "MiTM",
+                  "mitigation": "Encryption"
+                }
+              ],
+              "outOfScope": true,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isOutOfScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Store",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 921,
+                "y": 476
+              },
+              "angle": 0,
+              "id": "d2671a9d-7139-45a0-abc3-e877bd9647a1",
+              "z": 43,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "Vehicle DB"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "d2671a9d-7139-45a0-abc3-e877bd9647a1"
+              },
+              "target": {
+                "id": "6d8c725b-caea-4089-96d0-b20787382f62"
+              },
+              "vertices": [
+                {
+                  "x": 795,
+                  "y": 583
+                }
+              ],
+              "id": "2fcba016-552e-420f-9f8e-7357ca6edf83",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Vehicle Warehouse",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 44,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "fe1ce215-afb6-4798-b43a-58797932a3dc"
+              },
+              "target": {
+                "id": "d2671a9d-7139-45a0-abc3-e877bd9647a1"
+              },
+              "vertices": [
+                {
+                  "x": 1003,
+                  "y": 234
+                }
+              ],
+              "id": "37f619f0-393a-423b-82bc-50431b872126",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 45,
               "hasOpenThreats": true,
               "threats": [
                 {
